@@ -1,12 +1,7 @@
+import { mainFont } from "@/lib/fonts";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Wix_Madefor_Display } from "next/font/google";
 import "./globals.css";
-
-const mainFont = Wix_Madefor_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   title: "Cypher App",
