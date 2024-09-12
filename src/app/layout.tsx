@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { Wix_Madefor_Display } from "next/font/google";
+import "./globals.css";
 
-const mainFont = Space_Grotesk({
+const mainFont = Wix_Madefor_Display({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
