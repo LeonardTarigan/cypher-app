@@ -9,7 +9,7 @@ const mainFont = Wix_Madefor_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Cypher",
+  title: "Cypher App",
   description: "Anonymous messaging app",
 };
 
@@ -23,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${mainFont.className} bg-zinc-100 antialiased transition-all duration-200 dark:bg-zinc-950`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="light">
           <main className="mx-auto max-w-xl py-5 text-zinc-950 dark:text-zinc-100">
             {children}
           </main>

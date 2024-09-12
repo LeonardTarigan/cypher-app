@@ -1,8 +1,8 @@
 "use client";
 
 import Navbar from "@/components/shared/Navbar";
-import useMounted from "./hooks/useMounted";
 import SkeletonHome from "@/components/skeleton/SkeletonHome";
+import useMounted from "@/hooks/useMounted";
 
 export default function Home() {
   const { mounted } = useMounted();
