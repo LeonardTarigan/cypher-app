@@ -1,13 +1,15 @@
+import useToast from "@/hooks/useToast";
 import { Button, Input } from "@headlessui/react";
-import IconCopy from "../../icons/IconCopy";
 import { useCopyToClipboard } from "@uidotdev/usehooks";
-import IconCheckBadge from "../../icons/IconCheckBadge";
 import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
+import IconCheckBadge from "../../icons/IconCheckBadge";
+import IconCopy from "../../icons/IconCopy";
 
 export default function HomeSectionUser() {
   const [copiedText, copyToClipboard] = useCopyToClipboard();
   const [hasCopiedText, setHasCopiedText] = useState(Boolean(copiedText));
+
+  const { toastSuccess } = useToast();
 
   const url =
     "https://faceless-message.vercel.app/HbldzkkBbcP1rTeGhURSoUgLX273";
@@ -15,14 +17,7 @@ export default function HomeSectionUser() {
   const handleCopy = () => {
     copyToClipboard(url);
     setHasCopiedText(true);
-
-    toast.success("Copied to clipboard!", {
-      iconTheme: {
-        primary: "#84cc16",
-        secondary: "#f0fdf4",
-      },
-      position: "top-right",
-    });
+    toastSuccess("Copied to clipboard!");
   };
 
   useEffect(() => {
