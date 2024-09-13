@@ -2,6 +2,7 @@ import { mainFont } from "@/lib/fonts";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Cypher App",
@@ -19,9 +20,10 @@ export default function RootLayout({
         className={`${mainFont.className} bg-zinc-100 antialiased transition-all duration-200 dark:bg-zinc-950`}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
-          <main className="mx-auto max-w-xl py-5 text-zinc-950 dark:text-zinc-100">
+          <Toaster />
+          <div className="mx-auto max-w-xl py-5 text-zinc-950 dark:text-zinc-100">
             {children}
-          </main>
+          </div>
         </ThemeProvider>
       </body>
     </html>

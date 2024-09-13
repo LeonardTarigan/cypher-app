@@ -17,11 +17,11 @@ export default function AuthPage() {
           Connect to Cypher app with:
         </p>
         <div className="space-y-1 text-zinc-50">
-          <Button className="flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-800 py-2 transition-all duration-150 hover:bg-zinc-700 active:scale-95">
+          <Button className="flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-900 py-2 transition-all duration-150 hover:bg-zinc-700 active:scale-95">
             <IconGoogle className="size-4" />
             <span>Google</span>
           </Button>
-          <Button className="flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-800 py-2 transition-all duration-150 hover:bg-zinc-700 active:scale-95">
+          <Button className="flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-900 py-2 transition-all duration-150 hover:bg-zinc-700 active:scale-95">
             <IconApple className="size-4" />
             <span>Apple ID</span>
           </Button>

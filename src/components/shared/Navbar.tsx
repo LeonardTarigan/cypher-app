@@ -26,7 +26,7 @@ export default function Navbar() {
   };
 
   return (
-    <section className="flex items-center justify-between rounded-2xl bg-zinc-50 p-5 shadow-md dark:bg-zinc-900">
+    <section className="flex items-center justify-between rounded-2xl bg-zinc-50 p-5 shadow-md transition-colors duration-150 dark:bg-zinc-900">
       <Link href={"/"} className="flex items-center gap-[5px]">
         <span className={`${spaceGrotesk.className} text-2xl font-semibold`}>
           Cypher.
@@ -36,9 +36,9 @@ export default function Navbar() {
         <div>
           <Button
             onClick={switchTheme}
-            className="group flex size-10 items-center justify-center rounded-lg p-1 transition-all duration-150 hover:bg-zinc-200 active:scale-95 dark:hover:bg-zinc-800"
+            className="group flex size-10 items-center justify-center rounded-lg p-1 transition-all duration-150 hover:bg-zinc-200 active:scale-95 dark:hover:bg-zinc-700"
           >
-            {theme === "light" ? (
+            {theme === "dark" ? (
               <IconMoon className="size-6 transition-all duration-75 group-active:rotate-[30deg]" />
             ) : (
               <IconSun className="size-7 transition-all duration-75 group-active:rotate-[30deg]" />
@@ -70,7 +70,7 @@ export default function Navbar() {
                     <MenuItem>
                       <Link
                         href={"/"}
-                        className={`group flex items-center gap-[9px] rounded-lg p-2 text-zinc-900 transition-all duration-150 ${pathName === "/" ? "bg-zinc-900 !text-zinc-50 dark:bg-zinc-100 dark:!text-zinc-900" : "hover:bg-zinc-200 dark:text-zinc-100 dark:hover:bg-zinc-700"}`}
+                        className={`group flex items-center gap-[9px] rounded-lg p-2 text-zinc-900 transition-all duration-150 ${pathName === "/" ? "bg-zinc-900 !text-zinc-50 dark:bg-zinc-200 dark:!text-zinc-900" : "hover:bg-zinc-200 dark:text-zinc-100 dark:hover:bg-zinc-700"}`}
                       >
                         <IconHome className="size-4" />
                         <span>Home</span>
