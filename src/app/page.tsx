@@ -1,9 +1,9 @@
 "use client";
 
-import HomeSectionInbox from "@/components/sections/HomeSectionInbox";
-import HomeSectionUser from "@/components/sections/HomeSectionUser";
+import HomeSectionInbox from "@/components/home/sections/HomeSectionInbox";
+import HomeSectionUser from "@/components/home/sections/HomeSectionUser";
+import SkeletonHome from "@/components/home/skeleton/SkeletonHome";
 import Navbar from "@/components/shared/Navbar";
-import SkeletonHome from "@/components/skeleton/SkeletonHome";
 import useMounted from "@/hooks/useMounted";
 
 export default function HomePage() {
@@ -18,7 +18,6 @@ export default function HomePage() {
         <HomeSectionUser />
         <HomeSectionInbox />
       </main>
-      {/* <SkeletonHome /> */}
     </div>
   );
 }

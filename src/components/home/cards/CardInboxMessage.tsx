@@ -7,7 +7,7 @@ import {
   TransitionChild,
 } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import IconTrash from "../icons/IconTrash";
+import IconTrash from "../../icons/IconTrash";
 
 export default function CardInboxMessage() {
   let [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -29,14 +29,14 @@ export default function CardInboxMessage() {
           <Dialog as="div" className={`relative z-50`} onClose={closeDialog}>
             <TransitionChild
               as={Fragment}
-              enter="ease-out duration-300"
+              enter="ease-out duration-200"
               enterFrom="opacity-0"
               enterTo="opacity-100"
               leave="ease-in duration-200"
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm" />
+              <div className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-[2px]" />
             </TransitionChild>
 
             <div className="fixed inset-0 overflow-y-auto">
@@ -50,7 +50,7 @@ export default function CardInboxMessage() {
                   leaveFrom="opacity-100 scale-100"
                   leaveTo="opacity-0 scale-95"
                 >
-                  <DialogPanel className="flex w-full max-w-md transform flex-col items-end overflow-hidden rounded-2xl bg-zinc-50 p-5 text-left align-middle shadow-xl transition-all">
+                  <DialogPanel className="flex w-full max-w-md transform flex-col items-end overflow-hidden rounded-2xl bg-zinc-50 p-5 text-left align-middle shadow-xl transition-all dark:bg-zinc-900">
                     <DialogTitle
                       as="h3"
                       className="w-full text-xl font-bold leading-6 text-rose-500"
@@ -71,7 +71,7 @@ export default function CardInboxMessage() {
                       </Button>
                       <Button
                         onClick={closeDialog}
-                        className="mt-10 rounded-lg bg-zinc-100 px-4 py-2 font-semibold text-zinc-900 transition-all duration-150 hover:bg-zinc-200 active:scale-95"
+                        className="mt-10 rounded-lg bg-zinc-100 px-4 py-2 font-semibold text-zinc-900 transition-all duration-150 hover:bg-zinc-200 active:scale-95 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
                       >
                         Cancel
                       </Button>

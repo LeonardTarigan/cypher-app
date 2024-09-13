@@ -27,6 +27,19 @@ export default function SkeletonHome() {
           <div className="h-12 w-11 animate-pulse rounded-lg bg-zinc-200 px-4 py-2 dark:bg-zinc-800"></div>
         </div>
       </section>
+
+      <section className="flex flex-col items-center gap-2 rounded-2xl bg-zinc-50 p-5 shadow-md dark:bg-zinc-900">
+        <h2 className="w-fit animate-pulse rounded-full bg-zinc-200 text-center text-2xl font-bold dark:bg-zinc-800">
+          Inbox.
+        </h2>
+        <div className="my-5 h-10 w-full animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800"></div>
+        {[...Array(3)].map((_, index) => (
+          <div
+            key={index}
+            className="h-20 w-full animate-pulse rounded-xl bg-zinc-200 dark:bg-zinc-800"
+          ></div>
+        ))}
+      </section>
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import { Button, Input } from "@headlessui/react";
-import IconCopy from "../icons/IconCopy";
+import IconCopy from "../../icons/IconCopy";
 import { useCopyToClipboard } from "@uidotdev/usehooks";
-import IconCheckBadge from "../icons/IconCheckBadge";
+import IconCheckBadge from "../../icons/IconCheckBadge";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
